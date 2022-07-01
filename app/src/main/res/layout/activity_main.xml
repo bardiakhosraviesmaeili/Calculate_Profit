@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.widget.Button
+        android:id="@+id/buttonCalculateProfit"
+        android:layout_width="0dp"
+        android:layout_height="63dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/button_style"
+        android:backgroundTintMode="add"
+        android:fontFamily="sans-serif"
+        android:text="محاسبه سود"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:iconTint="@color/purple_200"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="195dp"
+        android:layout_height="123dp"
+        android:layout_marginBottom="120dp"
+        android:layoutDirection="rtl"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCalculateProfit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButton10percent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="سود ده درصد" />
+
+        <RadioButton
+            android:id="@+id/radioButton12percent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="سود دوازده درصد" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="217dp"
+        android:layout_height="84dp"
+        android:layout_marginBottom="48dp"
+        android:ems="10"
+        android:hint="مقدار را وارد کنید"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.931" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="185dp"
+        android:layout_height="157dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
